@@ -34,11 +34,15 @@ public class TrackerDemo {
 //
 //        StorageUtils.printItems(inventory);
 
-        StorageManage<Book> bookManager = new StorageManage<>();
-        bookManager.addItem(new Book("Clean Code", "Robert C. Martin"));
-        bookManager.addItem(new Book("Effective Java", "Joshua Bloch"));
-        System.out.println("Books in storage:");
-        bookManager.printAll();
+//        StorageManage<Book> bookManager = new StorageManage<>();
+//        bookManager.addItem(new Book("Clean Code", "Robert C. Martin"));
+//        bookManager.addItem(new Book("Effective Java", "Joshua Bloch"));
+//        System.out.println("Books in storage:");
+//        bookManager.printAll();
+
+        StorageUnit<Book> bookStorage = new StorageUnit<>();
+        bookStorage.addItem(new Book("Java Fundamentals", "Alice"));
+        System.out.println("JSON Output: " + JsonFormatter.toJson(bookStorage.getItem()));
 
 
     }
